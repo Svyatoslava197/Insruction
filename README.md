@@ -51,3 +51,13 @@ https://renode.io/#downloads. - выполнен успешно
 
 <img width="963" height="466" alt="image" src="https://github.com/user-attachments/assets/115513a4-9304-4597-9eca-c24a28753cce" />
 
+Пункт 4. Написание кода для STM32
+Создала файл stm32_program.c
+
+Добавила код для работы с регистрами STM32
+
+Скомпилировала в .bin формат ( команды компиляции: C:\mingw64\mingw64\bin\gcc.exe -nostdlib -ffreestanding -O0 -c stm32_program.c -o stm32_program.o
+C:\mingw64\mingw64\bin\objcopy.exe -O binary stm32_program.o stm32_program.bin)
+
+<img width="1308" height="701" alt="image" src="https://github.com/user-attachments/assets/f404601f-3b9d-41c9-a2d3-b20e66b022dc" />
+
