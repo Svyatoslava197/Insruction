@@ -64,6 +64,7 @@ C:\mingw64\mingw64\bin\objcopy.exe -O binary stm32_program.o stm32_program.bin
 
 ![image](https://github.com/user-attachments/assets/f404601f-3b9d-41c9-a2d3-b20e66b022dc)
 
+## буду доделывать 
 
 
 
