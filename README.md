@@ -1,63 +1,69 @@
-# Insruction
-Пункт 1.  в инструкции Александра:
-заходи на сайт https://renode.io/
+# Instruction
 
-нажимаем на кнопку Get Started или переходим по ссылке
+## Пункт 1. В инструкции Александра:
 
-https://renode.io/#downloads. - выполнен успешно
+- Заходи на сайт https://renode.io/
+- Нажимаем на кнопку "Get Started" или переходим по ссылке: https://renode.io/#downloads
 
-<img width="508" height="191" alt="image" src="https://github.com/user-attachments/assets/2696d94a-3892-4131-ab23-ec05149dc235" />
+ **Выполнено успешно**
 
-<img width="84" height="80" alt="image" src="https://github.com/user-attachments/assets/47fb8606-2b18-4662-823a-1b93a4d77239" />
+![image](https://github.com/user-attachments/assets/2696d94a-3892-4131-ab23-ec05149dc235)
 
-Пункт 2. "Настраиваем C/C++ для visual code", выполнен
+![image](https://github.com/user-attachments/assets/47fb8606-2b18-4662-823a-1b93a4d77239)
 
-Установка компилятора
+## Пункт 2. "Настраиваем C/C++ для Visual Code" - выполнен
+
+### Установка компилятора
 
 Компилятор - это программа, которая переводит ваш код с языка C на "язык микроконтроллера" (машинный код).
 
- Файл для скачивания
- 
-<img width="555" height="57" alt="image" src="https://github.com/user-attachments/assets/e5d690ef-5392-4a20-b769-ead65ddea5b6" />
+**Файл для скачивания:**
 
-Более подробное описание установки:
+![image](https://github.com/user-attachments/assets/e5d690ef-5392-4a20-b769-ead65ddea5b6)
 
-Процесс:
-Скачали MinGW-w64 с winlibs.com - это набор инструментов включая GCC
+**Более подробное описание установки:**
 
-Распаковали в C:\mingw64 - создали "дом" для компилятора
+**Процесс:**
+1. Скачали MinGW-w64 с winlibs.com - это набор инструментов включая GCC
+2. Распаковали в `C:\mingw64` - создали "дом" для компилятора
 
-<img width="1132" height="353" alt="image" src="https://github.com/user-attachments/assets/242e700e-a3a5-40e7-815d-78c41f17bd5c" />
+![image](https://github.com/user-attachments/assets/242e700e-a3a5-40e7-815d-78c41f17bd5c)
 
-Добавили в PATH - сказали системе "где искать компилятор"
+3. Добавили в PATH - сказали системе "где искать компилятор"
 
-<img width="431" height="194" alt="image" src="https://github.com/user-attachments/assets/521d7438-f4a7-46b1-859f-e6918b5c108a" />
+![image](https://github.com/user-attachments/assets/521d7438-f4a7-46b1-859f-e6918b5c108a)
 
-Проверили командой gcc --version
+4. Проверили командой `gcc --version`
+5. Установила расширение в Visual Code
 
-Установила расширение
+![image](https://github.com/user-attachments/assets/c426e4a0-d54c-491f-bb26-9ef0d483725c)
 
-<img width="825" height="199" alt="image" src="https://github.com/user-attachments/assets/c426e4a0-d54c-491f-bb26-9ef0d483725c" />
-<img width="811" height="197" alt="image" src="https://github.com/user-attachments/assets/3175929e-9eb8-4f66-9f4b-7ec4beffde19" />
+![image](https://github.com/user-attachments/assets/3175929e-9eb8-4f66-9f4b-7ec4beffde19)
 
-Пункт 3. "Меняем json в компиляторе C"
+## Пункт 3. "Меняем json в компиляторе C"
 
-Создание папки проекта
+**Создание папки проекта**
 
-<img width="321" height="108" alt="image" src="https://github.com/user-attachments/assets/05d8d621-b006-47ef-8aa6-71fee368871d" />
+![image](https://github.com/user-attachments/assets/05d8d621-b006-47ef-8aa6-71fee368871d)
+
+Создала файл `c_cpp_properties.json` - это "инструкция" для VS Code
+
+![image](https://github.com/user-attachments/assets/115513a4-9304-4597-9eca-c24a28753cce)
+
+## Пункт 4. Написание кода для STM32
+
+- Создала файл `stm32_program.c`
+- Добавила код для работы с регистрами STM32
+- Скомпилировала в .bin формат
+
+**Команды компиляции:**
+
+C:\mingw64\mingw64\bin\gcc.exe -nostdlib -ffreestanding -O0 -c stm32_program.c -o stm32_program.o
+C:\mingw64\mingw64\bin\objcopy.exe -O binary stm32_program.o stm32_program.bin
 
 
-Создала файл c_cpp_properties.json - это "инструкция" для VS Code
+![image](https://github.com/user-attachments/assets/f404601f-3b9d-41c9-a2d3-b20e66b022dc)
 
-<img width="963" height="466" alt="image" src="https://github.com/user-attachments/assets/115513a4-9304-4597-9eca-c24a28753cce" />
 
-Пункт 4. Написание кода для STM32
-Создала файл stm32_program.c
 
-Добавила код для работы с регистрами STM32
-
-Скомпилировала в .bin формат ( команды компиляции: C:\mingw64\mingw64\bin\gcc.exe -nostdlib -ffreestanding -O0 -c stm32_program.c -o stm32_program.o
-C:\mingw64\mingw64\bin\objcopy.exe -O binary stm32_program.o stm32_program.bin)
-
-<img width="1308" height="701" alt="image" src="https://github.com/user-attachments/assets/f404601f-3b9d-41c9-a2d3-b20e66b022dc" />
 
